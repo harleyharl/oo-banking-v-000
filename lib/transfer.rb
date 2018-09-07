@@ -11,9 +11,7 @@ class Transfer
   end
 
   def valid?
-    if @status != "complete"
     @sender.valid? && @receiver.valid?
-    end
   end
 
   def execute_transaction
