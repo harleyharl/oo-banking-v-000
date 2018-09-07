@@ -14,7 +14,7 @@ class Transfer
     if @status != "complete"
     @sender.valid? && @receiver.valid?
     binding.pry
-    @sender.balance > self.amount
+    @sender.balance > @amount
     end
   end
 
