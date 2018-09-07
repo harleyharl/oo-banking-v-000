@@ -13,8 +13,9 @@ class Transfer
   def valid?
     if @status != "complete"
     @sender.valid? && @receiver.valid?
-    # binding.pry
     @sender.balance > @amount
+  else
+    "rejected"
     end
   end
 
