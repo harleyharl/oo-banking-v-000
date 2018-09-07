@@ -11,8 +11,7 @@ class Transfer
   end
 
   def valid?
-    if @status != "complete"
-    @sender.valid? && @receiver.valid?
+    if @status != "complete" && @sender.valid? && @receiver.valid? && @sender.balance > self.amount
     end
   end
 
