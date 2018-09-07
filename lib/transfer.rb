@@ -8,7 +8,6 @@ class Transfer
     @receiver = receiver
     @amount = transfer_amount
     @status = "pending"
-    binding.pry
   end
 
   def valid?
@@ -20,6 +19,7 @@ class Transfer
         @sender.balance = @sender.balance - @amount
         @receiver.balance = @receiver.balance + @amount
         @status = "complete"
+        binding.pry
       elsif
          valid? && @sender.balance < @amount
         @status = "Transaction rejected. Please check your account balance."
