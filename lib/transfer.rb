@@ -8,6 +8,7 @@ class Transfer
     @receiver = receiver
     @amount = transfer_amount
     @status = "pending"
+    binding.pry
   end
 
   def valid?
@@ -33,7 +34,6 @@ class Transfer
       @receiver.balance = @receiver.balance - @amount
       @status = "reversed"
     end
-    binding.pry
   end
 
 
